@@ -40,4 +40,5 @@ numberOf503 = phoneNumbers.reduce((count, phoneNumber) => {
     }
   }, 0)
 
-  console.log(numberOf503)
+//   console.log(numberOf503)
+

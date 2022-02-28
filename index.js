@@ -18,8 +18,19 @@ let capitalizedFruits = fruits.map(fruit => fruit.toUpperCase())
 // console.log(capitalizedFruits);
 
 const prices = [5, 4.23, 6.4, 8.09, 3.20];
+const priceString = price => `$${price.toFixed(2)}`
+const displayPrices = prices.map(priceString)
 
-let priceString = prices.map(price => `$${price.toFixed(2)}`)
 
-console.log(priceString)
+// console.log(displayPrices)
     // Result: [ '$5.00', '$4.23', '$6.40', '$8.09', '$3.20' ]
+
+const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+let abbreviatedDays;
+
+// abbreviatedDays should be: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+// Write your code below
+
+abbreviatedDays = daysOfWeek.map(dayOfWeek => dayOfWeek.slice(0,3))
+
+console.log(abbreviatedDays)

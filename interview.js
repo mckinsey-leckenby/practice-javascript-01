@@ -46,3 +46,19 @@ console.log(
             results.push(array[i].name)
         }
     }
+
+    function maximizeProfit(arr) {
+        let maxProfit = 0
+        for (let i = 0; i < arr.length; i++)
+            for (let j = i + 1; j < arr.length; j++) {
+                if (arr[j] > arr[i]) {
+                    let profit = arr[j] - arr[i]
+                    if (profit > maxProfit) {
+                        maxProfit = profit
+                    }
+                }
+            }
+            return maxProfit
+    }
+    
+    console.log(maximizeProfit(actualArray))

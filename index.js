@@ -47,7 +47,7 @@ let usersObject = users.reduce((usersObject, user) => {
 }, {} )
 // console.log(addedAgeArray)
 // console.log(displayNewUserList)
-console.log(usersObject)
+// console.log(usersObject)
 
 // let myArray = [0,1,2,3,4]
 // myArray.forEach(num => console.log(num % 2))
@@ -59,10 +59,7 @@ const authors = [
     { firstName: "Roald", lastName: "Dahl" },
     { firstName: "Lewis", lastName: "Carroll" }
   ];
-  let fullAuthorNames;
-  fullAuthorNames = authors.reduce((fullAuthorNames, author) => {
-      fullAuthorNames = `${author.firstName} ` + `${author.lastName}`
-      return fullAuthorNames
-  }, {})
+  let fullAuthorNames = authors.map(author => author.firstName + " " + author.lastName)
+   
 
   console.log(fullAuthorNames)

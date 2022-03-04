@@ -62,4 +62,14 @@ const authors = [
   let fullAuthorNames = authors.map(author => author.firstName + " " + author.lastName)
    
 
-  console.log(fullAuthorNames)
+//   console.log(fullAuthorNames)
+
+  const userNames = ['Samir', 'Angela', 'Beatrice', 'Shaniqua', 'Marvin', 'Sean'];
+
+  let objectSNames = userNames
+  .filter(userName => userName.charAt(0) === ("S"))
+  .map(userName => ({ name: userName }))
+    
+
+
+  console.log(objectSNames)

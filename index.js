@@ -1,30 +1,62 @@
-
-const array1 = [1, 2, 3, 4];
-
-// 0 + 1 + 2 + 3 + 4
-const sumWithInitial = array1
-    .reduce((previousValue, currentValue) => {
-        (previousValue + currentValue)
-    });
-console.log(sumWithInitial);
-// expected output: 10
+// const movies = [
+//     ['The Day the Earth Stood Still', 'Superman', 'Ghostbusters'],
+//     ['Finding Dory'],
+//     ['Jaws', 'On the Waterfront']
+//   ]
 
 
-const products = [
-    { name: 'hard drive', price: 59.99 },
-    { name: 'lighbulbs', price: 2.59 },
-    { name: 'paper towels', price: 6.99 },
-    { name: 'flatscreen monitor', price: 159.99 },
-    { name: 'cable ties', price: 19.99 },
-    { name: 'ballpoint pens', price: 4.49 }
-];
+//   const flatMovies = movies.reduce((arr, innerMovies) => [...arr, ...innerMovies], [])
 
-let highestProductUnderTen = products
-.filter(product => product.price > 10)
-//console.log(highestProductUnderTen)
+//   console.log(flatMovies)
 
-let addedPrices = highestProductUnderTen.reduce((sum, product) => sum + product.price, 0)
-.toFixed(2)
+//   const users = [
+//     {
+//       name: 'Samir',
+//       age: 27,
+//       favoriteBooks:[
+//         {title: 'The Iliad'},
+//         {title: 'The Brothers Karamazov'}
+//       ]
+//     },
+//     {
+//       name: 'Angela',
+//       age: 33,
+//       favoriteBooks:[
+//         {title: 'Tenth of December'},
+//         {title: 'Cloud Atlas'},
+//         {title: 'One Hundred Years of Solitude'}
+//       ]
+//     },
+//     {
+//       name: 'Beatrice',
+//       age: 42,
+//       favoriteBooks:[
+//         {title: 'Candide'}
+//       ]
+//     }
+//   ];
 
-console.log(addedPrices)
+//   console.log(users)
 
+// Result: ['The Iliad', 'The Brothers Karamazov', 'Tenth of December', 'Cloud Atlas', 'One Hundred Years of Solitude', 'Candide'];
+
+
+const array = [6, 9, 11, 7, 5, 12]
+
+function maximizeProfit(array) {
+    let maxProfit = 0
+    for (let i = 0; i < array.length; i++) {
+        for (let j = i + 1; j < array.length; j++) {
+            if (array[j] > array[i]) {
+                let profit = array[j] - array[i]
+                console.log(profit)
+                if (profit > maxProfit) {
+                    maxProfit = profit
+                    // console.log(maxProfit)
+                }
+            }
+        }
+    }
+    return maxProfit
+}
+console.log(maximizeProfit(array))

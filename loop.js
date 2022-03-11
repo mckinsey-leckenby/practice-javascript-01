@@ -12,4 +12,12 @@ function wrapGifts(gifts){
     }
     return gifts 
 }
-wrapGifts(gifts)
+// wrapGifts(gifts)
+
+writeCards(["Charlie", "Samip", "Ali"], "birthday");
+
+function writeCards (namesArray, event)
+    let thankYouCards = []
+    for (let i =0; i < namesArray.length; i++){
+        thankYouCards.push
+    }

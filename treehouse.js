@@ -25,3 +25,8 @@ const customers = [
   
   // hobbies should be: ["Bicycling", "Camping", "Guitar", "Reading", "Gardening", "Comics", "Chess", "Legos"]
   // Write your code below
+
+  hobbies = customers.map(customer => customer.personal.hobbies.map(hobby => hobby))
+//   .reduce((arr, hobbies) => [...arr, ...hobbies], [])
+
+  console.log(hobbies)

@@ -39,24 +39,10 @@
 //   console.log(users)
 
 // Result: ['The Iliad', 'The Brothers Karamazov', 'Tenth of December', 'Cloud Atlas', 'One Hundred Years of Solitude', 'Candide'];
+const drivers = ['Antonia', 'Nuru', 'Amari', 'Mo']
 
+ function returnFirstTwoDrivers () {
+    return drivers.slice(0, 2);
+  };
 
-const array = [6, 9, 11, 7, 5, 12]
-
-function maximizeProfit(array) {
-    let maxProfit = 0
-    for (let i = 0; i < array.length; i++) {
-        for (let j = i + 1; j < array.length; j++) {
-            if (array[j] > array[i]) {
-                let profit = array[j] - array[i]
-                console.log(profit)
-                if (profit > maxProfit) {
-                    maxProfit = profit
-                    // console.log(maxProfit)
-                }
-            }
-        }
-    }
-    return maxProfit
-}
-console.log(maximizeProfit(array))
+  console.log(returnFirstTwoDrivers(drivers))
